@@ -10,7 +10,7 @@ const express_1 = __importDefault(require('express'));
 const scraper_sosmed_1 = require('@bochilteam/scraper-sosmed');
 require('dotenv').config();
 // Create a bot using the Telegram token
-const bot = new grammy_1.Bot(process.env.TELEGRAM_TOKEN || '');
+const bot = new grammy_1.Bot('6378892627:AAE2DeUeKNVs-NF0TyYg5iHhhRbySSJmuKk');
 // when command is ping reply this servers ping ms
 bot.command('ping', (ctx) => ctx.reply('server uptime: ' + Math.round(process.uptime()) + 'ms'));
 bot.command('download', async (ctx) => {
