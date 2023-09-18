@@ -58,7 +58,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.json());
   app.use(webhookCallback(bot, 'express'));
 
-  const PORT = process.env.PORT;
+  const PORT = process.env.PORT || process.env.APP_PORT;
   app.listen(PORT, () => {
     console.log(`Bot listening on port ${PORT}`);
   });
