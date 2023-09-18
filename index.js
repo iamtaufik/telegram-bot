@@ -4,7 +4,7 @@ import { tiktokdl, facebookdlv2 } from '@bochilteam/scraper-sosmed';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const bot = new Bot(process.env.TELEGRAM_TOKEN || '');
+const bot = new Bot('6378892627:AAE2DeUeKNVs-NF0TyYg5iHhhRbySSJmuKk');
 
 bot.command('ping', (ctx) => ctx.reply('server uptime: ' + Math.round(process.uptime()) + 'ms'));
 
