@@ -29,8 +29,8 @@ bot.command('download', async (ctx) => {
       return ctx.replyWithVideo(result.result[0].url);
     }
   } catch (error) {
-    console.log(error.message);
-    return ctx.reply(error.message);
+    console.log(error);
+    return ctx.reply(error);
   }
 });
 // Suggest commands in the menu
