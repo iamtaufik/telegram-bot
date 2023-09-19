@@ -21,7 +21,7 @@ bot.command('download', async (ctx) => {
     if (url.startsWith('https://vt.tiktok.com/')) {
       ctx.reply('Please wait...');
       const result = await (0, scraper_sosmed_1.tiktokdl)(url);
-      return ctx.reply(result.video.no_watermark_hd);
+      return ctx.reply(String(result.video.no_watermark_hd));
     }
     if (url.startsWith('https://www.facebook.com/')) {
       ctx.reply('Please wait...');
@@ -30,7 +30,7 @@ bot.command('download', async (ctx) => {
     }
   } catch (error) {
     console.log(error);
-    return ctx.reply(error);
+    return ctx.reply(error.message);
   }
 });
 // Suggest commands in the menu
