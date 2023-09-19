@@ -21,7 +21,7 @@ bot.command('download', async (ctx) => {
     if (url.startsWith('https://vt.tiktok.com/')) {
       ctx.reply('Please wait...');
       const result = await (0, scraper_sosmed_1.tiktokdl)(url);
-      return await ctx.replyWithVideo(result.video.no_watermark_hd);
+      return await ctx.api.sendVideo(ctx.chat.id, result.video.no_watermark_hd);
     }
     if (url.startsWith('https://www.facebook.com/')) {
       ctx.reply('Please wait...');
